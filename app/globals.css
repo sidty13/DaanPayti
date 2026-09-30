@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #F7F3E8;
+  --surface: #FFFDF8;
+  --primary: #1F4D3A;
+  --primary-hover: #173B2C;
+  --moss: #8FB573;
+  --soft-tint: #E6EEDC;
+  --accent: #D9A441;
+  --bark: #6B4F3A;
+  --attention: #C8643C;
+  --text: #22261F;
+  --muted: #66695C;
+  --border: #E3DCC8;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: var(--font-mukta), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tabular figures for Indian currency amounts */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Organic smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F3E8;
+}
+::-webkit-scrollbar-thumb {
+  background: #D5CBB5;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B8AC93;
+}
+
+/* Accessibility focus styles */
+:focus-visible {
+  outline: 2px solid #1F4D3A;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
